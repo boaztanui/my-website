@@ -8,7 +8,7 @@ function Header() {
         <HeaderContainer>
 
             <HeaderLeft>
-                <a href="#"><img src={Logo} alt="" />tanui</a>
+                <a href="#"><img src={Logo} alt="" /> tanui </a>
             </HeaderLeft>
 
             <NavSection>
@@ -32,13 +32,20 @@ function Header() {
 export default Header;
 
 const HeaderContainer = styled.div`
+    position: sticky;
+    top: 0;
     height: 5rem;
+    width: 100%;
+    z-index: 1000;
     background-color: #fff;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 3.5rem;
     padding-right: 3.5rem;
+   
+    
 `;
 
 const HeaderLeft = styled.div`

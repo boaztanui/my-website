@@ -1,5 +1,7 @@
 :root {
-  --color-primary: #fff;
+  --color-primary: #E7F0FF;
+  --color-secondary: #303F9F;
+ 
 }
 
 * {
@@ -13,6 +15,7 @@
   box-sizing: inherit;
 }
 
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; 
@@ -21,17 +24,30 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.7;
   color: #000;
   background-image: linear-gradient(to top, #fff 0%, #E7F0FF 100%);
   background-repeat: no-repeat;
-  height: 100vh;
-
+  min-height: 100%;
+  max-width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body::-webkit-scrollbar {
+  width: 1.2rem;
 }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #303F9F;
+  border: 3px solid #303F9F;
+  border-radius: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background:#a2bbe6;
+}
+
+
+
+

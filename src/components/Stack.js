@@ -29,13 +29,16 @@ function Stack() {
                 <CardBox
                     icon={Frontend}
                     header="Front End Development"
-                    content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, fuga!"
+                    content="
+                    For the front-end, I use HTMl5, CSS3, SCSS, styled compontents, Javascript and React.Js framework. I may also use Next.Js for the frontend framwork. 
+                    "
                 />
 
                 <CardBox
                     icon={Backend}
                     header="Backend Development"
-                    content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, fuga!"
+                    content="
+                    I Develop my backend using Javascript's NODE.js, MongoDB, Express and firebase"
                 />
 
                 <CardBox
@@ -63,8 +66,7 @@ export default Stack;
 
 const StackContainer = styled.div`
     margin-top: 15rem;
-    height: 100vh;
-  
+    height: 100vh;  
 
 `;
 
@@ -79,7 +81,7 @@ const StackContent = styled.div`
 
     > p {
         margin-top: 2rem;
-        font-weight: 500;
+        font-weight: 400;
     }
 `;
 

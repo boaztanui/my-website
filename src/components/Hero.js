@@ -2,14 +2,13 @@ import React from 'react';
 import { Button } from '@material-ui/core';
 
 import styled from 'styled-components';
-import DevImg from './dev-1.svg';
+import DevImg from './img/dev-1.svg';
 
 
 
 function Hero() {
     return (
         <HeroContainer>
-            {/**Hero Left */}
             <HeroLeft>
                 <h1>Boaz Tanui.</h1>
                 <h2>I build things for the web.</h2>
@@ -30,13 +29,14 @@ function Hero() {
 export default Hero;
 
 const HeroContainer = styled.div`
+    margin:9rem 7rem;
     display: flex;
-    margin:9rem 5rem;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 `;
 
 const HeroLeft = styled.div`
-        height: 50vh;
-        width: 50vw;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

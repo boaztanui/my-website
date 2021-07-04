@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 import Header from './components/Header';
-import Hero from './components/img/Hero';
-import About from './components/Stack';
+import Hero from './components/Hero';
+import Stack from './components/Stack';
+import About from './components/About';
+import ProjectContainer from './components/ProjectContainer';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -10,6 +13,8 @@ function App() {
       <Header />
       <Hero />
       <About />
+      <ProjectContainer />
+      <Contact />
 
       {/**Salute */}
       {/**Projects */}
@@ -22,5 +27,9 @@ function App() {
 export default App;
 
 const AppContainer = styled.div`
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 `;

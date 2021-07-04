@@ -5,8 +5,9 @@ import { Card, CardContent, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles({
     root: {
-        minWidth: '27.5rem',
-        height: '15rem',
+        minWidth: '20rem',
+        height: '20rem',
+        backgroundColor: 'var(--color-primary)'
     },
     img: {
         height: '3rem',
@@ -18,9 +19,11 @@ const useStyles = makeStyles({
     },
     title: {
         fontSize: '1.4rem',
+        marginTop: 10,
     },
     content: {
         fontSize: '1.2rem',
+        marginTop: 10,
     }
 });
 
@@ -45,7 +48,7 @@ function CardBox({ icon, header, content }) {
 export default CardBox;
 
 const CardContainer = styled.div`
- width: 25%;
+ 
 `;
 
 
