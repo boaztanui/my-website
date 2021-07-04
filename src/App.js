@@ -9,7 +9,7 @@ import Spinner from 'react-spinkit';
 
 function App() {
   let loading;
-  if (!loading) {
+  if (loading) {
     return (
       <AppLoading>
         <AppLoadingContents>
