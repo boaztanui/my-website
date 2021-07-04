@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import CardHeader from '@material-ui/core/CardHeader';
 import IconButton from '@material-ui/core/IconButton';
 import Avatar from '@material-ui/core/Avatar';
+import LinkIcon from '@material-ui/icons/Link';
 
 
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -17,17 +18,23 @@ import CenterFocusWeakIcon from '@material-ui/icons/CenterFocusWeak';
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 345,
-        backgroundColor: 'var(--color-primary)'
+        maxWidth: '34.5rem',
+        backgroundColor: 'var(--color-primary)',
+        height: '40rem',
 
     },
     media: {
         height: 140,
     },
+    link: {
+        textDecoration: 'none',
+        color: 'black',
+        fontSize: '1rem'
+    }
 });
 
-function Projects({ github, liveLink, img, header, content, stack }) {
-    console.log(stack)
+function Projects({ github, liveLink, img, header, content, fullStack }) {
+
     const classes = useStyles();
     return (
         <Card className={classes.root}>
@@ -40,15 +47,13 @@ function Projects({ github, liveLink, img, header, content, stack }) {
                     }
                     action={
                         <IconButton >
-                            <a target="_blank" rel="noreferrer" href={github}><GitHubIcon /></a>
+                            <a target="_blank" rel="noreferrer" href={github} className={classes.link}><GitHubIcon /></a>
                         </IconButton>
                     }
 
-                    subheader={<Button size="small" color="primary">
-                        LIVE LINK
+                    title={<Button size="small" color="primary">
+                        <a target="_blank" rel="noreferrer" href={liveLink} className={classes.link}>Live Link</a>
                     </Button>}
-
-                    title={header}
 
 
 
@@ -62,22 +67,19 @@ function Projects({ github, liveLink, img, header, content, stack }) {
                     <Typography gutterBottom variant="h5" component="h2">
                         {header}
                     </Typography>
-                    <Typography variant="body3" color="textSecondary" component="p">
+                    {content ? (<Typography variant="body3" color="textSecondary" component="p">
+                        {content}
+                    </Typography>) : (<Typography variant="body3" color="textSecondary" component="p">
                         Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                         across all continents except Antarctica
-                    </Typography>
+                    </Typography>)}
+
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" color="primary">
-                    React
-                </Button>
-                <Button size="small" color="primary">
-                    firebae
-                </Button>
-                <Button size="small" color="primary">
-                    Node
-                </Button>
+                {fullStack ? (fullStack.map((stack) => <Button size="small" color="primary"> {stack}
+                </Button>)) : (<Button size="small" color="primary"> React
+                </Button>)}
 
             </CardActions>
         </Card>

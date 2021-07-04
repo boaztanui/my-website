@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 function Contact() {
 
     return (
-        <ContactContainer>
+        <ContactContainer id='contact'>
             <ContactContent>
                 <h2>Get In Touch</h2>
                 <p>
@@ -23,7 +23,7 @@ function Contact() {
                 <a href="https://www.linkedin.com/in/boaztanui/"><img src={LinkedInIcon} alt="" /></a>
 
 
-                <a href=""><img src={EmailIcon} alt="" /></a>
+                <a href="mailto:@boaztanui058@gmail.com?subject=The%20subject&body=This%20is%20a%20message%20body"><img src={EmailIcon} alt="" /></a>
 
 
                 <a href="https://github.com/boaztanui"><img src={GitHubIcon} alt="" /></a>
@@ -38,7 +38,7 @@ function Contact() {
             </ContactFooter>
 
 
-        </ContactContainer>
+        </ContactContainer >
     )
 }
 
@@ -48,9 +48,7 @@ const ContactContainer = styled.div`
     text-align: Center;
     max-width: 60rem;
     margin-top: 10rem;
-    height: 50vh;
-
-    
+    height: 50vh;    
 `;
 
 const ContactContent = styled.div`
@@ -58,6 +56,10 @@ const ContactContent = styled.div`
     > h2 {
         font-weight: 900;
         font-size: 6.2rem;
+
+        @media only screen and (max-width: 48.75em) {
+            font-size: 5.2rem;
+         }
     }
 
     > p {
@@ -84,6 +86,10 @@ const ContactFooter = styled.div`
 
 > hr {
     margin-top: 6rem;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 > h4 {
@@ -99,3 +105,4 @@ const ContactFooter = styled.div`
     margin-bottom: 6rem
 } 
 `;
+

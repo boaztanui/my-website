@@ -13,16 +13,14 @@ function Header() {
 
             <NavSection>
                 <ul>
-                    <li> <a href="#">About</a></li>
-                    <li> <a href="#">Stack</a></li>
-                    <li> <a href="#">Projects</a></li>
+                    <li> <a href={"#about"}>About</a></li>
+                    <li> <a href={"#about"}>Stack</a></li>
+                    <li> <a href={"#projects"}>Projects</a></li>
                 </ul>
             </NavSection>
 
             <HeaderRight>
-                <Button variant="contained" color="primary">
-                    Contact Me
-                </Button>
+                <a href={'#contact'}><Button variant="contained" color="primary">Contact Me</Button> </a>
             </HeaderRight>
 
         </HeaderContainer>
@@ -32,6 +30,7 @@ function Header() {
 export default Header;
 
 const HeaderContainer = styled.div`
+
     position: sticky;
     top: 0;
     height: 5rem;
@@ -44,6 +43,11 @@ const HeaderContainer = styled.div`
     align-items: center;
     padding-left: 3.5rem;
     padding-right: 3.5rem;
+
+    @media only screen and (max-width: 26.185em) {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+         }
    
     
 `;
@@ -92,9 +96,9 @@ const NavSection = styled.div`
 `;
 
 const HeaderRight = styled.div`
-    
-    > Button {
-        font-size: 1rem;
+    > a {
+        text-decoration: none;
     }
-
+    a > Button {
+        font-size: 1rem; }
 `;
