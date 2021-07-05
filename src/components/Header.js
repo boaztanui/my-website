@@ -8,7 +8,7 @@ function Header() {
         <HeaderContainer>
 
             <HeaderLeft>
-                <a href="#"><img src={Logo} alt="" /> tanui </a>
+                <a href="#"><img src={Logo} alt="" /> <span>tanui </span> </a>
             </HeaderLeft>
 
             <NavSection>
@@ -64,6 +64,13 @@ const HeaderLeft = styled.div`
     > a > img {
         height: 2rem;
         margin-right: 0.4rem;
+    }
+
+    a > span {
+        @media only screen and (max-width: 27.5625em) {
+           display: none;
+         }
+   
     }
 `;
 
