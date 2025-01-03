@@ -85,7 +85,7 @@
 
 import React, { useState, useEffect } from "react";
 
-const UnderConstruction = () => {
+const App = () => {
   const [countdown, setCountdown] = useState("");
 
   useEffect(() => {
@@ -159,5 +159,5 @@ const styles = {
   },
 };
 
-export default UnderConstruction;
+export default App;
 
